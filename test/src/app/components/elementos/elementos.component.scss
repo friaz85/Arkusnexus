@@ -1,0 +1,14 @@
+
+:host {
+  width: 80%;
+  table {
+    width: 100%;
+  }
+
+  form {
+    display: flex;
+    place-content: center;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

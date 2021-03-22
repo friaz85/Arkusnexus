@@ -1,0 +1,17 @@
+<!-- Toolbar -->
+<mat-toolbar color="primary" class="app-header">
+  <div><a href="#" class="positronx">Test</a></div>
+  <span class="nav-tool-items" *ngIf="!currentUser">
+    <a mat-button routerLink="login" routerLinkActive="active">Iniciar sesión</a>
+    <a mat-button mat-raised-button routerLink="register" routerLinkActive="active">Registrar</a>
+  </span>
+  <span class="nav-tool-items" *ngIf="currentUser">
+    <a mat-button routerLink="login" routerLink="/">Home</a>
+    <a mat-button routerLink="login" routerLink="elementos">Elementos</a>
+    <a mat-button mat-raised-button (click)="logout()">Salir</a>
+  </span>
+</mat-toolbar>
+
+<div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center">
+<router-outlet></router-outlet>
+</div>
